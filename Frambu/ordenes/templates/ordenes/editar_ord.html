@@ -1,0 +1,21 @@
+{%extends 'base/base.html'%}
+{% load static %}
+{%block content%}
+<div class="ordenes">     
+    <form method="POST"> 
+        {% csrf_token %} 
+        {%if error%} 
+            <h2>{{error}}</h2> 
+        {% else %} 
+                <div class="card-header"> 
+                    <h5>Actualizar Orden</h5> 
+                </div> 
+                <div class="card-body card-block"> 
+                    {{ord_form.as_p}}
+                </div> 
+                <button type="submit" class="btn btn-success">Actualizar</button> 
+                <a href="{%url 'ordenes' %}" type="button" class="btn btn-danger">Cancelar</a> 
+        {%endif%} 
+        </form> 
+     
+{%endblock%}

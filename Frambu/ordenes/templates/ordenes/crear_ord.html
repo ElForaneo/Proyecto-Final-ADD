@@ -1,0 +1,18 @@
+{%extends 'base/base.html'%}
+{% load static %}
+
+{%block content%}
+<div class="ordenes">
+<form method="POST"class="post-form" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="card-body card-block"> 
+    <form action="#" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
+      {{ord_form.as_p}}
+      <button type="submit" class="btn btn-success">Agregar</button> 
+      <a href="{%url 'ordenes' %}" type="button" class="btn btn-danger" >Cancelar</a> 
+</form>
+
+</div>
+
+
+{%endblock%}

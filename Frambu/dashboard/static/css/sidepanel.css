@@ -1,0 +1,31 @@
+.sidebar{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background: #077575;
+    border-radius: 0px 28px 28px 0px;
+}
+
+.sidebar a {
+    position: relative;
+    display: block;
+    color: #B9DBDC;
+    padding: 16px;
+    text-decoration: none;
+    top: 18%;
+}
+
+.sidebar a.activate {
+    color: #EC8129;
+}
+   
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    transition: 2s;
+}
+
+#Dash, #Orden{
+    vertical-align:text-top;
+    
+}

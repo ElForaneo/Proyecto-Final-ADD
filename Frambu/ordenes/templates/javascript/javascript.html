@@ -1,0 +1,29 @@
+<!-- Script para mostrar detalles del producto-->
+<script>
+    $("#exampleModal").on("show.bs.modal", function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var pk = button.data("prod-id"); // Extract info from data-* attributes
+    var nombre = button.data("prod-nombre"); // Extract info from data-* attributes
+    var pedido = button.data("prod-pedido");
+    var enviado = button.data("prod-enviado");
+    var entregado = button.data("prod-entregado");
+    var estado = button.data("prod-estado")
+    var modal = $(this);
+    modal.find(".modal-title").text("Descripcion del producto " + nombre);
+    modal
+      .find(".modal-body")
+      .html(
+        `Id del Producto: <b>${pk}</b>` +
+          "<br><br>" +
+        `Nombre del producto: <b>${nombre}</b>` +
+          "<br><br>" +
+        `Producto existente en bodega:  <b>${pedido}</b>` +
+        "<br><br>" +
+        `Tipo de producto:  <b>${enviado}</b>` +
+        "<br><br>" +
+        `descripcion:  <b>${entregado}</b>` +
+        "<br><br>"+
+        `Codigo de barras:  <b>${estado}</b>`
+      );
+  });
+</script>

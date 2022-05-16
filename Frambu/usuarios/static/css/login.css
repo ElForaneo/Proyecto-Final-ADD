@@ -1,0 +1,38 @@
+body{
+    background-color: #73CCCC;
+}
+.login{
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    left: 356px;
+    top: 88px;
+    
+    background: #077575;
+    border-radius: 23px;
+}
+
+
+.login_title{
+    position: relative;
+    width: 409px;
+    height: 39px;
+    left: 25%;
+    margin-top: 10%;
+    color: white;
+    font-family: 'Poppins';
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.15px;
+}
+
+#label_usuario{
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+.label_usuario{
+    background: #026666;
+    border-radius: 8px;
+}

@@ -1,0 +1,91 @@
+.ordenes{
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    left: 25%;
+    top: 15%;
+    background: #077575;
+    border-radius: 23px;
+}
+
+.headerord{
+    position: relative;
+    width: 100%;
+    height: 12%;
+    background: #005151;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 23px 23px 0px 0px;
+}
+
+.headerord h1{
+    position: relative;
+    top: 15%;
+    left: -20%;
+    display: inline;
+    color: white;
+}
+
+.ordenes .headerord .container-fluid{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    top: 0%;
+    left: 60%;
+}
+
+
+#Contenedor{
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 2%;
+}
+
+#Contenedor thead tr{
+    border-bottom: 1px solid grey;
+}
+
+#Contenedor thead tr th{
+    letter-spacing: 1px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+#Contenedor tbody tr td{
+    letter-spacing: 1px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+.Boton{
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    height: 38px;
+    position: relative;
+    top: 1px;
+    left: 20px;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border: 1px;
+    display: inline-block;
+}
+
+.Boton:hover{
+    background-color: rgb(94, 92, 92);
+    color: white;
+    transition: .15s ;
+    text-decoration:none; 
+    cursor:pointer; 
+}
+
+.error{
+    position: relative;
+    top: 50%;
+    left: 50%;
+}

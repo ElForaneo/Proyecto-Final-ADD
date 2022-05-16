@@ -1,0 +1,23 @@
+{%extends 'base/base.html'%}
+{% load static %}
+
+{%block title%}
+Confirmacion de Eliminacion
+{%endblock title%}
+
+{%block content%}
+
+<div class="ordenes">
+    <form method="POST">
+        {% csrf_token %}
+            
+        <h2>¿Desea Eliminar el producto {{object}}?</h2>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a class="Boton" href="{% url 'ordenes' %}"> Cancelar</a>
+    </form>
+    
+</div>
+
+
+
+{%endblock%}
