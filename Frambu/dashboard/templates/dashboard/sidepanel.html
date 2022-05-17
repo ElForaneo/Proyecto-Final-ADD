@@ -19,6 +19,9 @@
         <a href="{{ url }}" class="{%if request.path == url%}activate{%endif%}"><i class="material-icons" id="Dash">dashboard</i><span>Dashboard</span></a>
         {%url 'ordenes' as url %}
         <a href="{{ url }}" class="{%if request.path == url%}activate{%endif%}"><i class="material-symbols-outlined" id="Orden">list_alt</i><span>Ordenes</span></a>
+        {%url 'clientes' as url%}
+        <a href="{{ url }}" class="{%if request.path == url%}activate{%endif%}"><i class="material-symbols-outlined" id="Orden">person</i><span>Clientes</span></a>
+
     </div>
     
 </body>

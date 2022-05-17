@@ -29,8 +29,8 @@
                 <tr>
                     <td class="ord_nombre">{{ordenes.nombre}}</td>
                     <td class="ord_nombre">{{ordenes.producto_pedido}}</td>
-                    <td class="ord_nombre">{{ordenes.prodcuto_enviado}}</td>
-                    <td class="ord_nombre">{{ordenes.produto_entregado}}</td>
+                    <td class="ord_nombre">{{ordenes.producto_enviado}}</td>
+                    <td class="ord_nombre">{{ordenes.producto_entregado}}</td>
                     <td class="ord_nombre">{{ordenes.estado}}</td>
                     <td><a href="{%url 'editar_ord' ordenes.id %}" class="editar" ><span data-bs-toggle="tooltip" data-bs-placement="top" title="Editar" class="material-icons-outlined">
                         edit
@@ -41,13 +41,13 @@
                       <td><a data-prod-id="{{ordenes.id}}" data-prod-nombre="{{ordenes.nombre}}" data-prod-pedido="{{ordenes.producto_pedido}}" data-prod-enviado="{{ordenes.producto_enviado}}" data-prod-entregado="{{ordenes.producto_entregado}}" data-prod-estado="{{ordenes.estado}}" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" ><span data-bs-toggle="tooltip" data-bs-placement="top" title="Detalles" class="material-icons-outlined">
                         more_vert
                         </span></a></td>
-                {%include 'ordenes/modales_tabla.html'%}
-                </tr>
-                {%endfor%}
-                {%else%}
-                <tr>
-                    <h4 id="error">Este prodcuto no Existe</h4>
-                  </tr>
+                        {%include 'ordenes/modales_tabla.html'%}
+                        {%endfor%}
+                        {%else%}
+                        <tr>
+                            <h4 id="error">Este prodcuto no Existe</h4>
+                        </tr>
+                    </tr>
                   {%endif%}
             </tbody>
         </table>

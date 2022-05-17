@@ -7,7 +7,7 @@
   {% csrf_token %}
   <div class="card-body card-block"> 
     <form action="#" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
-      {{ord_form.as_p}}
+      {{user_form.as_p}}
       <button type="submit" class="btn btn-success">Agregar</button> 
       <a href="{%url 'ordenes' %}" type="button" class="btn btn-danger" >Cancelar</a> 
 </form>

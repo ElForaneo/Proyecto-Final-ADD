@@ -12,16 +12,15 @@ from .forms import PedidoForm, PedidoFromEdit
 @login_required
 def ordenes(request):
     ord = Productos.objects.all()
+    ord_form = PedidoFromEdit()
     queryset = request.GET.get("buscar")
     if queryset:
         ord = Productos.objects.filter(
             Q(nombre__icontains = queryset)|
             Q(estado__icontains = queryset)
         ).distinct()
-    context = {
-        'ord':ord
-    }
-    return render(request,'ordenes/ordenes.html', context)
+
+    return render(request,'ordenes/ordenes.html', {'ord':ord, 'ord_form':ord_form })
 
 
 @login_required

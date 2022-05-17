@@ -36,3 +36,8 @@ body{
     background: #026666;
     border-radius: 8px;
 }
+
+.registrarte a{
+    color: white;
+    text-decoration: none;
+}

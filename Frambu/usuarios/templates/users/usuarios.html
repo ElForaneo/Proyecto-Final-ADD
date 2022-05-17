@@ -1,0 +1,58 @@
+{%extends 'base/base.html'%}
+{%load static%}
+
+{%block content%}
+
+<div class="ordenes">
+    <div class="headerord">
+        <div class="container-fluid">
+            <form action="GET">
+                <input class="form-control mx-sm-3 mb-2" type="search" placeholder="Search" aria-label="Search" name="buscar" value="{{request.GET.buscar}}">
+            </form>
+        </div>
+
+        <h1>Ordenes</h1>
+    </div>
+        <table class="sortable" id="Contenedor">
+            <thead>
+                <tr>
+                    <th>Nombre del Cliente</th>
+                    <th>Primer nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Email</th>
+                    <th>Numero</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%if usuarios%}
+                {%for users in usuarios%}
+                <tr>
+                    <td class="ord_nombre">{{users.username}}</td>
+                    <td class="ord_nombre"></td>
+                    <td class="ord_nombre"></td>
+                    <td class="ord_nombre"></td>
+                    <td class="ord_nombre"></td>
+                    <td><a href="#" class="editar" ><span data-bs-toggle="tooltip" data-bs-placement="top" title="Editar" class="material-icons-outlined">
+                        edit
+                        </span></a></td>
+                        <td ><a  href="#" class="Eliminar"><span data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar"  class="material-icons">
+                          delete
+                          </span></a></td>
+                      <td><a href="#"><span data-bs-toggle="tooltip" data-bs-placement="top" title="Detalles" class="material-icons-outlined">
+                        more_vert
+                        </span></a></td>
+                        {%include 'ordenes/modales_tabla.html'%}
+                        {%endfor%}
+                        {%else%}
+                        <tr>
+                            <h4 id="error">Este prodcuto no Existe</h4>
+                        </tr>
+                    </tr>
+                  {%endif%}
+            </tbody>
+        </table>
+</div>
+{%include 'javascript/javascript.html'%}
+
+
+{%endblock%}

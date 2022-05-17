@@ -7,8 +7,9 @@ from django.contrib.auth.models import User
 
 
 class Empleado(models.Model):
-    usuario = models.OneToOneField(User,null=False,blank=False,on_delete=models.CASCADE)
-    nombre = models.CharField(null=False,blank=False,unique=True,max_length=50)
+    id = models.AutoField(primary_key=True)
+    usuario = models.OneToOneField(User,null=False,blank=False,on_delete=models.CASCADE,)
+    nombre = models.CharField(null=False,blank=True,unique=True,max_length=50)
     nombre_2 = models.CharField(null=True,blank=True,unique=True,max_length=50)
     Apellido_Paterno = models.CharField(null=False,blank=False,unique=True,max_length=50)
     Apellido_Materno = models.CharField(null=False,blank=False,unique=True,max_length=50)
@@ -16,4 +17,4 @@ class Empleado(models.Model):
 
 
 class EmpleadoAdmin(admin.ModelAdmin):
-    list_display =('usuario', 'nombre', 'nombre_2', 'Apellido_Paterno','Apellido_Materno')
+    list_display =('usuario', 'nombre', 'nombre_2', 'Apellido_Paterno','Apellido_Materno', 'telefono')
